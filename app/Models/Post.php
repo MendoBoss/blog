@@ -14,7 +14,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $guard = [];
+    protected $guarded = [];
 
     public function comments():HasMany
     {
@@ -25,7 +25,7 @@ class Post extends Model
         return $this->hasMany(Image::class);
     }
     public function user():BelongsTo {
-        return $this->belognsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
 }

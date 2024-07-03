@@ -11,6 +11,8 @@ class Photo extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function user():BelongsTo {
         return $this->belognsTo(User::class);
     }
