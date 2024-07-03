@@ -18,7 +18,7 @@ class BlogController extends Controller
         ]);
         $post->comments()->save($comment);
 
-        return redirect()->route('posts.show', $post->id)
+        return redirect()->route('showOne', $post->id)
         ->with('success', 'Commentaire ajouté avec succès.');
            
     }
